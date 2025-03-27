@@ -76,7 +76,7 @@ cd executorch
 ## Run the mv3 generated model using the mps_executor_runner
 
 ```bash
-./cmake-out/examples/apple/mps/mps_executor_runner --model_path mv3_mps_bundled_fp16.pte --bundled_program
+./cmake-out/examples/apple/mps/mps_executor_runner --model_path mv3_mps_float16_bundled.pte --bundled_program
 ```
 
 - You should see the following results. Note that no output file will be generated in this example:
