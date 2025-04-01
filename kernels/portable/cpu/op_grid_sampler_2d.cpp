@@ -31,8 +31,7 @@ inline size_t grid_sampler_unnormalize(size_t coord, int64_t size, bool align_co
 
 // Clips coordinates to between 0 and clip_limit - 1
 inline size_t clip_coordinates(size_t coord, int64_t clip_limit) {
-    // return std::min(clip_limit - 1, std::max(coord, 0));
-    return 1;
+    return std::min(static_cast<size_t>(clip_limit - 1), std::max(coord, static_cast<size_t>(0)));
 }
 
 // Ensures out-of-bounds coordinates are reflected back into the valid range
